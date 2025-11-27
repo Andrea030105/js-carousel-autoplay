@@ -39,16 +39,7 @@ const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
 next.addEventListener('click', function () {
-    if (itemActive < items.length) {
-        items[itemActive].classList.remove('active');
-        circles[itemActive].classList.remove('active');
-        itemActive++;
-        if (itemActive === items.length) {
-            itemActive = 0
-        }
-        items[itemActive].classList.add('active');
-        circles[itemActive].classList.add('active');
-    }
+    nextImge();
 });
 
 prev.addEventListener('click', function () {
@@ -65,4 +56,17 @@ prev.addEventListener('click', function () {
     }
 })
 
+function nextImge() {
+    if (itemActive < items.length) {
+        items[itemActive].classList.remove('active');
+        circles[itemActive].classList.remove('active');
+        itemActive++;
+        if (itemActive === items.length) {
+            itemActive = 0
+        }
+        items[itemActive].classList.add('active');
+        circles[itemActive].classList.add('active');
+    }
+}
 
+setInterval(nextImge, 2000);

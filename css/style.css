@@ -1,41 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.slider{
+.slider {
     width: 50vw;
     height: 50vh;
-    position:relative;
+    position: relative;
 }
 
-.item{
+.item {
     display: none;
 }
 
-.item-slider, .item, img{
+.item-slider,
+.item,
+img {
     height: 100%
 }
 
-.item img{
+.item img {
     width: 100%;
     object-fit: cover;
 }
 
-.arrow{
+.arrow {
     position: absolute;
     width: 40px;
     background-color: rgba(174, 174, 174, 0.509);
     border-radius: 50px;
-    font-weight: 800; 
+    font-weight: 800;
     left: 50%;
     font-size: 30px;
     transform: translateX(-50%);
@@ -43,28 +45,29 @@
     cursor: pointer;
 }
 
-.next{
-    top: 5px; 
+.next {
+    top: 5px;
 }
 
-.prev{
+.prev {
     bottom: 5px;
 }
 
-.prev:hover, .next:hover{
-    background-color: rgba(174, 174, 174, 1);   
+.prev:hover,
+.next:hover {
+    background-color: rgba(174, 174, 174, 1);
 }
 
-.item.active{
+.item.active {
     display: block;
 }
 
-.circles-container{
+.circles-container {
     display: flex;
     justify-content: center;
 }
 
-.circle{
+.circle {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -75,6 +78,18 @@
 }
 
 
-.circle.active, .circle:hover{
-    background-color: rgba(174, 174, 174, 1); 
+.circle.active,
+.circle:hover {
+    background-color: rgba(174, 174, 174, 1);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container button {
+    margin: 1rem;
+    padding: 15px;
+    border-radius: 10px;
 }
