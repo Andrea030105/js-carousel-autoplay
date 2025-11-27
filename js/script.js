@@ -69,4 +69,15 @@ function nextImge() {
     }
 }
 
+const btnPlay = document.getElementById("play");
+const btnStop = document.getElementById("stop");
+let nextImgeAuto;
+btnPlay.addEventListener("click", function () {
+    nextImgeAuto = setInterval(nextImge, 500);
+})
+
+btnStop.addEventListener("click", function () {
+    clearInterval(nextImgeAuto);
+})
+
 setInterval(nextImge, 2000);
