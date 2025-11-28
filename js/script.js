@@ -71,13 +71,13 @@ function nextImge() {
 
 const btnPlay = document.getElementById("play");
 const btnStop = document.getElementById("stop");
-let nextImgeAuto;
+let nextImgeAuto = setInterval(nextImge, 2000);
+
 btnPlay.addEventListener("click", function () {
-    nextImgeAuto = setInterval(nextImge, 500);
+    nextImgeAuto = setInterval(nextImge, 2000);
 })
 
 btnStop.addEventListener("click", function () {
     clearInterval(nextImgeAuto);
 })
 
-setInterval(nextImge, 2000);
