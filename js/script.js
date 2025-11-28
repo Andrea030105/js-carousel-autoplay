@@ -38,11 +38,11 @@ circles[itemActive].classList.add('active');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
-next.addEventListener('click', function () {
-    nextImge();
-});
+next.addEventListener('click', nextImge);
 
-prev.addEventListener('click', function () {
+prev.addEventListener('click', prevImge);
+
+function prevImge() {
     if (itemActive >= 0) {
         items[itemActive].classList.remove('active');
         circles[itemActive].classList.remove('active');
@@ -54,7 +54,7 @@ prev.addEventListener('click', function () {
         items[itemActive].classList.add('active');
         circles[itemActive].classList.add('active');
     }
-})
+}
 
 function nextImge() {
     if (itemActive < items.length) {
